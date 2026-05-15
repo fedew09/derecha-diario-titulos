@@ -14,8 +14,7 @@ body { background: #0a1628; color: #fff; font-family: 'Segoe UI', Arial, sans-se
 .divider { width: 40px; height: 3px; background: #e63946; margin: 10px auto 0; }
 .container { max-width: 680px; margin: 0 auto; padding: 0 16px 40px; }
 label.lbl { display: block; font-size: 11px; color: #8899aa; font-weight: 800; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase; }
-textarea, input[type=text] { width: 100%; background: #0a1628; border: 1px solid #1e3a5f; border-radius: 8px; color: #fff; padding: 10px 14px; font-size: 13px; outline: none; font-family: inherit; }
-textarea { resize: vertical; }
+textarea { width: 100%; background: #0a1628; border: 1px solid #1e3a5f; border-radius: 8px; color: #fff; padding: 10px 14px; font-size: 13px; outline: none; font-family: inherit; resize: vertical; }
 .mb16 { margin-bottom: 16px; }
 .mb20 { margin-bottom: 20px; }
 .btn-gen { width: 100%; padding: 14px; border-radius: 8px; border: none; background: #e63946; color: #fff; font-weight: 900; font-size: 14px; cursor: pointer; letter-spacing: 2px; margin-bottom: 28px; box-shadow: 0 4px 20px #e6394640; }
@@ -23,41 +22,39 @@ textarea { resize: vertical; }
 .btn-copy { background: #1e3a5f; color: #fff; border: none; border-radius: 4px; padding: 3px 10px; font-size: 11px; cursor: pointer; font-weight: 700; white-space: nowrap; }
 .btn-copy.ok { background: #22c55e; }
 .btn-regen { background: #0d1f3c; color: #8899aa; border: 1px solid #1e3a5f; border-radius: 4px; padding: 3px 8px; font-size: 11px; cursor: pointer; font-weight: 700; }
-.btn-regen:disabled { cursor: not-allowed; }
+.btn-regen:disabled { cursor: not-allowed; opacity: 0.5; }
 .btn-use { background: #22c55e22; color: #22c55e; border: 1px solid #22c55e44; border-radius: 4px; padding: 3px 8px; font-size: 11px; cursor: pointer; font-weight: 700; }
-.btn-use:hover { background: #22c55e44; }
 .card { background: #112240; border: 1px solid #1e3a5f; border-radius: 8px; padding: 12px 16px; margin-bottom: 8px; }
-.card-left-red { border-left: 3px solid #e63946; }
-.card-left-blue { border-left: 3px solid #3b82f6; }
+.card-red { border-left: 3px solid #e63946; }
+.card-blue { border-left: 3px solid #3b82f6; }
 .sec-title { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
-.sec-bar-red { width: 4px; height: 18px; background: #e63946; border-radius: 2px; }
-.sec-bar-blue { width: 4px; height: 18px; background: #3b82f6; border-radius: 2px; }
-.sec-bar-green { width: 4px; height: 18px; background: #22c55e; border-radius: 2px; }
-.sec-bar-red, .sec-bar-blue, .sec-bar-green { flex-shrink: 0; }
-h2.stitle { font-size: 13px; color: #fff; letter-spacing: 2px; font-weight: 900; margin: 0; }
+.bar-red { width: 4px; height: 18px; background: #e63946; border-radius: 2px; flex-shrink: 0; }
+.bar-blue { width: 4px; height: 18px; background: #3b82f6; border-radius: 2px; flex-shrink: 0; }
+.bar-green { width: 4px; height: 18px; background: #22c55e; border-radius: 2px; flex-shrink: 0; }
+h2.st { font-size: 13px; color: #fff; letter-spacing: 2px; font-weight: 900; margin: 0; }
 .sublbl { color: #8899aa; font-size: 10px; margin-bottom: 4px; letter-spacing: 1px; }
-.result-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-.result-text { color: #fff; font-size: 14px; font-weight: 800; flex: 1; }
-.mini-titulo { color: #fff; font-size: 20px; font-weight: 900; }
-.mini-sub { color: #93c5fd; font-size: 13px; font-weight: 600; }
-.error { color: #e63946; font-size: 13px; margin-bottom: 12px; font-weight: 700; }
+.mini-titulo { color: #fff; font-size: 20px; font-weight: 900; margin-bottom: 10px; }
+.mini-sub { color: #93c5fd; font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+.error { color: #e63946; font-size: 13px; margin-bottom: 12px; font-weight: 700; display: none; }
 .upload-label { display: flex; align-items: center; gap: 10px; background: #112240; border: 1px dashed #1e3a5f; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-size: 13px; }
+.thumbs-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
 .thumb-wrap { position: relative; display: inline-block; }
 .thumb-wrap img { width: 64px; height: 42px; object-fit: cover; border-radius: 4px; border: 1px solid #1e3a5f; display: block; }
-.thumb-del { position: absolute; top: -5px; right: -5px; background: #e63946; border: none; border-radius: 50%; width: 16px; height: 16px; font-size: 9px; color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; }
-.thumbs-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.thumb-del { position: absolute; top: -5px; right: -5px; background: #e63946; border: none; border-radius: 50%; width: 16px; height: 16px; font-size: 9px; color: #fff; cursor: pointer; }
 .qty-row { display: flex; gap: 8px; }
-.qty-btn { flex: 1; padding: 9px; border-radius: 6px; border: 2px solid #1e3a5f; background: #112240; color: #8899aa; font-weight: 900; font-size: 15px; cursor: pointer; letter-spacing: 1px; }
+.qty-btn { flex: 1; padding: 9px; border-radius: 6px; border: 2px solid #1e3a5f; background: #112240; color: #8899aa; font-weight: 900; font-size: 15px; cursor: pointer; }
 .qty-btn.active { border-color: #e63946; background: #e6394622; color: #fff; }
 .storage-box { background: #112240; border: 1px solid #1e3a5f; border-radius: 8px; padding: 12px 14px; margin-bottom: 10px; }
 .storage-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
 .storage-title { font-size: 12px; font-weight: 800; letter-spacing: 1px; }
 .storage-toggle { background: #0a1628; border: 1px solid #1e3a5f; color: #8899aa; border-radius: 4px; padding: 2px 10px; font-size: 11px; cursor: pointer; font-weight: 700; }
-.storage-input { width: 100%; background: #0a1628; border-radius: 6px; color: #fff; padding: 8px 12px; font-size: 12px; outline: none; font-family: inherit; }
+.storage-input { width: 100%; background: #0a1628; border-radius: 6px; color: #fff; padding: 8px 12px; font-size: 12px; outline: none; font-family: inherit; resize: vertical; }
 .storage-item { display: flex; align-items: center; gap: 8px; background: #0a1628; border-radius: 4px; padding: 5px 10px; margin-top: 4px; }
 .storage-item span { flex: 1; font-size: 12px; color: #fff; font-weight: 600; }
 .storage-item button { background: none; border: none; color: #8899aa; cursor: pointer; font-size: 12px; }
 .border-top { border-top: 1px solid #1e3a5f; padding-top: 24px; }
+.result-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+.result-text { color: #fff; font-size: 14px; font-weight: 800; flex: 1; }
 </style>
 </head>
 <body>
@@ -78,7 +75,6 @@ h2.stitle { font-size: 13px; color: #fff; letter-spacing: 2px; font-weight: 900;
 
 <div class="container">
 
-  <!-- Miniaturas -->
   <div class="mb16">
     <label class="lbl">🖼️ Miniaturas anteriores <span style="color:#334a66;font-weight:400">(hasta 15, opcional)</span></label>
     <label class="upload-label" for="thumbInput">
@@ -88,43 +84,38 @@ h2.stitle { font-size: 13px; color: #fff; letter-spacing: 2px; font-weight: 900;
     <div class="thumbs-row" id="thumbsRow"></div>
   </div>
 
-  <!-- Descripción -->
   <div class="mb16">
     <label class="lbl">🎥 Describí el nuevo video <span style="color:#e63946">*</span></label>
     <textarea id="desc" rows="3" placeholder="Ej: Entrevista a Monteoliva con Feinmann sobre el ajuste del gobierno..."></textarea>
   </div>
 
-  <!-- Transcripción -->
   <div class="mb20">
     <label class="lbl">📝 Transcripción del video <span style="color:#334a66;font-weight:400">(opcional)</span></label>
     <textarea id="transcript" rows="4" placeholder="Pegá acá la transcripción..."></textarea>
   </div>
 
-  <!-- Cantidad -->
   <div class="mb20">
     <label class="lbl">🎯 Cantidad de títulos</label>
     <div class="qty-row" id="qtyRow"></div>
   </div>
 
-  <div class="error" id="errorMsg" style="display:none"></div>
+  <div class="error" id="errorMsg"></div>
   <button class="btn-gen" id="btnGen" onclick="generate()">⚡ GENERAR TÍTULOS Y MINIATURAS</button>
 
-  <!-- Resultados -->
   <div id="results" style="display:none;margin-bottom:32px">
     <div style="margin-bottom:24px">
-      <div class="sec-title"><div class="sec-bar-red"></div><h2 class="stitle">TÍTULOS PARA YOUTUBE</h2></div>
+      <div class="sec-title"><div class="bar-red"></div><h2 class="st">TÍTULOS PARA YOUTUBE</h2></div>
       <div id="titulosDiv"></div>
     </div>
     <div>
-      <div class="sec-title"><div class="sec-bar-blue"></div><h2 class="stitle">IDEAS PARA MINIATURA</h2></div>
+      <div class="sec-title"><div class="bar-blue"></div><h2 class="st">IDEAS PARA MINIATURA</h2></div>
       <div id="miniaturasDiv"></div>
     </div>
   </div>
 
-  <!-- Entrenar IA -->
   <div class="border-top">
-    <div class="sec-title"><div class="sec-bar-green"></div><h2 class="stitle">ENTRENAR LA IA</h2></div>
-    <p style="color:#8899aa;font-size:11px;margin-bottom:16px;letter-spacing:.5px">GUARDÁ LOS TÍTULOS QUE USASTE — ESCRIBÍ Y PRESIONÁ ENTER (O PEGÁ VARIOS A LA VEZ)</p>
+    <div class="sec-title"><div class="bar-green"></div><h2 class="st">ENTRENAR LA IA</h2></div>
+    <p style="color:#8899aa;font-size:11px;margin-bottom:16px">GUARDÁ LOS TÍTULOS QUE USASTE — ESCRIBÍ Y PRESIONÁ ENTER (O PEGÁ VARIOS A LA VEZ)</p>
     <div id="box_dd_yt_titles"></div>
     <div id="box_dd_mini_titles"></div>
     <div id="box_dd_mini_subs"></div>
@@ -133,18 +124,19 @@ h2.stitle { font-size: 13px; color: #fff; letter-spacing: 2px; font-weight: 900;
 </div>
 
 <script>
-const OR_KEY = "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";
-const OR_URL = "https://openrouter.ai/api/v1/chat/completions";
+const API_KEY = "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";
+const API_URL = "https://openrouter.ai/api/v1/chat/completions";
+const MODEL = "meta-llama/llama-3.3-8b-instruct:free";
 
 let thumbsData = [];
 let currentResults = null;
 let cant = 6;
 
-// ── Storage ──────────────────────────────────────────
+// ── Storage ──
 function loadStore(key) { try { return (localStorage.getItem(key) || "").split("\n").filter(Boolean); } catch { return []; } }
 function saveStore(key, arr) { try { localStorage.setItem(key, arr.join("\n")); } catch {} }
 
-// ── Cantidad ─────────────────────────────────────────
+// ── Cantidad ──
 const qtyRow = document.getElementById("qtyRow");
 [3,6,9,12].forEach(n => {
   const b = document.createElement("button");
@@ -154,7 +146,7 @@ const qtyRow = document.getElementById("qtyRow");
   qtyRow.appendChild(b);
 });
 
-// ── Miniaturas ────────────────────────────────────────
+// ── Miniaturas ──
 function handleImages(e) {
   const files = Array.from(e.target.files).slice(0, 15 - thumbsData.length);
   Promise.all(files.map(f => new Promise(res => {
@@ -168,7 +160,8 @@ function renderThumbs() {
   const status = document.getElementById("thumbStatus");
   row.innerHTML = "";
   if (thumbsData.length === 0) { status.style.color = "#8899aa"; status.textContent = "Hacé clic para subir imágenes..."; return; }
-  status.style.color = "#22c55e"; status.textContent = "✓ " + thumbsData.length + " imagen" + (thumbsData.length>1?"es":"") + " guardada" + (thumbsData.length>1?"s":"");
+  status.style.color = "#22c55e";
+  status.textContent = "✓ " + thumbsData.length + " imagen" + (thumbsData.length > 1 ? "es" : "") + " guardada" + (thumbsData.length > 1 ? "s" : "");
   thumbsData.forEach((t, i) => {
     const wrap = document.createElement("div"); wrap.className = "thumb-wrap";
     const img = document.createElement("img"); img.src = t.src;
@@ -178,43 +171,29 @@ function renderThumbs() {
   });
   const delAll = document.createElement("button");
   delAll.style.cssText = "background:#112240;color:#8899aa;border:1px solid #1e3a5f;border-radius:4px;padding:0 10px;font-size:11px;cursor:pointer;font-weight:700";
-  delAll.textContent = "✕ BORRAR TODO"; delAll.onclick = () => { thumbsData = []; renderThumbs(); };
+  delAll.textContent = "✕ BORRAR TODO";
+  delAll.onclick = () => { thumbsData = []; renderThumbs(); };
   row.appendChild(delAll);
 }
 
-// ── Copy button ───────────────────────────────────────
-function makeCopy(text) {
-  const b = document.createElement("button"); b.className = "btn-copy"; b.textContent = "COPIAR";
-  b.onclick = () => { navigator.clipboard.writeText(text); b.textContent = "✓ COPIADO"; b.classList.add("ok"); setTimeout(() => { b.textContent = "COPIAR"; b.classList.remove("ok"); }, 1500); };
-  return b;
-}
-
-// ── Use button ────────────────────────────────────────
-function makeUse(text, storageKey) {
-  const b = document.createElement("button"); b.className = "btn-use"; b.textContent = "✓ USAR ESTE";
-  b.onclick = () => {
-    const arr = loadStore(storageKey);
-    arr.push(text.toUpperCase());
-    saveStore(storageKey, arr);
-    renderStorageBox(storageKey);
-    b.textContent = "✓ GUARDADO"; b.style.opacity = "0.5"; b.disabled = true;
-  };
-  return b;
-}
-
-// ── Gemini API ────────────────────────────────────────
-async function callGemini(prompt) {
-  const res = await fetch(GEMINI_URL, {
+// ── API ──
+async function callAPI(prompt) {
+  const res = await fetch(API_URL, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0.9, maxOutputTokens: 2048 } })
+    headers: { "Content-Type": "application/json", "Authorization": "Bearer " + API_KEY },
+    body: JSON.stringify({ model: MODEL, messages: [{ role: "user", content: prompt }] })
   });
   const data = await res.json();
-  const txt = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
-  return JSON.parse(txt.replace(/```json|```/g, "").trim());
+  if (data.error) throw new Error(data.error.message);
+  const txt = data.choices?.[0]?.message?.content || "";
+  const clean = txt.replace(/```json|```/g, "").trim();
+  const start = clean.indexOf("{");
+  const end = clean.lastIndexOf("}");
+  if (start === -1 || end === -1) throw new Error("JSON no encontrado en la respuesta");
+  return JSON.parse(clean.slice(start, end + 1));
 }
 
-// ── Generate ──────────────────────────────────────────
+// ── Generar ──
 async function generate() {
   const desc = document.getElementById("desc").value.trim();
   const transcript = document.getElementById("transcript").value.trim();
@@ -230,108 +209,123 @@ async function generate() {
   const tB = ytT.length > 0 ? "TÍTULOS YOUTUBE ANTERIORES:\n" + ytT.join("\n") + "\n\n" : "";
   const mB = mnT.length > 0 ? "TÍTULOS DE MINIATURA ANTERIORES:\n" + mnT.join("\n") + "\n\n" : "";
   const sB = mnS.length > 0 ? "SUBTÍTULOS DE MINIATURA ANTERIORES:\n" + mnS.join("\n") + "\n\n" : "";
-  const trB = transcript ? "\n\nTranscripción (resumen del contenido):\n" + transcript.slice(0, 3000) : "";
+  const trB = transcript ? "\n\nTranscripción:\n" + transcript.slice(0, 3000) : "";
 
-  const prompt = `Sos un experto en YouTube de contenido político de derecha en español (Argentina).
-REGLAS: TODO en MAYÚSCULAS. Imitá el estilo del canal. Generá exactamente ${cant} títulos YouTube distribuidos entre cortos (máx 5 palabras), medianos (6-10 palabras) y largos (11+ palabras). Título de miniatura: MÁXIMO 5 PALABRAS. Subtítulo entre asteriscos *ASÍ*, más largo, en MAYÚSCULAS.
-Respondé SOLO con JSON válido sin markdown ni backticks:
-{"titulos":["T1","T2",...],"miniaturas":[{"titulo":"TITULO","subtitulo":"*SUBTITULO*"},{"titulo":"TITULO","subtitulo":"*SUBTITULO*"},{"titulo":"TITULO","subtitulo":"*SUBTITULO*"}]}
-
-${tB}${mB}${sB}Nuevo video: ${desc}${trB}`;
+  const prompt = "Sos un experto en YouTube de contenido político de derecha en español (Argentina).\n" +
+    "REGLAS: TODO en MAYÚSCULAS. Imitá el estilo del canal. Generá exactamente " + cant + " títulos YouTube distribuidos entre cortos (máx 5 palabras), medianos (6-10 palabras) y largos (11+ palabras). Título de miniatura: MÁXIMO 5 PALABRAS. Subtítulo entre asteriscos *ASÍ*, más largo, en MAYÚSCULAS.\n" +
+    "Respondé SOLO con JSON válido sin markdown ni texto extra:\n" +
+    "{\"titulos\":[\"T1\",\"T2\",...],\"miniaturas\":[{\"titulo\":\"TITULO\",\"subtitulo\":\"*SUBTITULO*\"},{\"titulo\":\"TITULO\",\"subtitulo\":\"*SUBTITULO*\"},{\"titulo\":\"TITULO\",\"subtitulo\":\"*SUBTITULO*\"}]}\n\n" +
+    tB + mB + sB + "Nuevo video: " + desc + trB;
 
   try {
-    currentResults = await callGemini(prompt);
+    currentResults = await callAPI(prompt);
     renderResults();
     document.getElementById("results").style.display = "block";
-  } catch(e) { errEl.textContent = "⚠ Error al generar: " + e.message; errEl.style.display = "block"; }
+  } catch(e) {
+    errEl.textContent = "⚠ Error al generar: " + e.message;
+    errEl.style.display = "block";
+  }
   btn.disabled = false; btn.textContent = "⚡ GENERAR TÍTULOS Y MINIATURAS";
 }
 
-// ── Regen título ──────────────────────────────────────
-async function regenTitulo(i, current) {
+// ── Regenerar título ──
+async function regenTitulo(i, current, btn) {
+  btn.disabled = true; btn.textContent = "...";
   const ytT = loadStore("dd_yt_titles");
   const tB = ytT.length > 0 ? "TÍTULOS YOUTUBE ANTERIORES:\n" + ytT.join("\n") + "\n\n" : "";
-  const prompt = `Sos un experto en YouTube de contenido político de derecha en español (Argentina). TODO en MAYÚSCULAS.
-${tB}Este título no convence: "${current}". Generá uno parecido pero diferente, mismo largo aproximado, mismo estilo.
-Respondé SOLO con JSON sin markdown: {"titulo":"NUEVO TITULO"}`;
+  const prompt = "Sos un experto en YouTube de contenido político de derecha en español (Argentina). TODO en MAYÚSCULAS.\n" +
+    tB + "Este título no convence: \"" + current + "\". Generá uno parecido pero diferente, mismo largo aproximado.\n" +
+    "Respondé SOLO con JSON sin markdown: {\"titulo\":\"NUEVO TITULO\"}";
   try {
-    const p = await callGemini(prompt);
+    const p = await callAPI(prompt);
     currentResults.titulos[i] = p.titulo;
     renderResults();
   } catch {}
+  btn.disabled = false; btn.textContent = "↻";
 }
 
-// ── Regen miniatura ───────────────────────────────────
-async function regenMiniatura(i, tituloActual, subActual) {
+// ── Regenerar miniatura ──
+async function regenMiniatura(i, tituloActual, subActual, btn) {
+  btn.disabled = true; btn.textContent = "...";
   const mnT = loadStore("dd_mini_titles");
   const mnS = loadStore("dd_mini_subs");
   const mB = mnT.length > 0 ? "TÍTULOS DE MINIATURA ANTERIORES:\n" + mnT.join("\n") + "\n\n" : "";
   const sB = mnS.length > 0 ? "SUBTÍTULOS DE MINIATURA ANTERIORES:\n" + mnS.join("\n") + "\n\n" : "";
-  const prompt = `Sos un experto en YouTube de contenido político de derecha en español (Argentina). TODO en MAYÚSCULAS.
-${mB}${sB}Esta miniatura no convence — título: "${tituloActual}", subtítulo: "${subActual}". Generá una parecida pero diferente.
-Respondé SOLO con JSON sin markdown: {"titulo":"TITULO","subtitulo":"*SUBTITULO*"}`;
+  const prompt = "Sos un experto en YouTube de contenido político de derecha en español (Argentina). TODO en MAYÚSCULAS.\n" +
+    mB + sB + "Esta miniatura no convence — título: \"" + tituloActual + "\", subtítulo: \"" + subActual + "\". Generá una parecida pero diferente.\n" +
+    "Respondé SOLO con JSON sin markdown: {\"titulo\":\"TITULO\",\"subtitulo\":\"*SUBTITULO*\"}";
   try {
-    const p = await callGemini(prompt);
+    const p = await callAPI(prompt);
     currentResults.miniaturas[i] = p;
     renderResults();
   } catch {}
+  btn.disabled = false; btn.textContent = "↻ REGENERAR";
 }
 
-// ── Render resultados ─────────────────────────────────
+// ── Botones ──
+function makeCopy(text) {
+  const b = document.createElement("button"); b.className = "btn-copy"; b.textContent = "COPIAR";
+  b.onclick = () => { navigator.clipboard.writeText(text); b.textContent = "✓ COPIADO"; b.classList.add("ok"); setTimeout(() => { b.textContent = "COPIAR"; b.classList.remove("ok"); }, 1500); };
+  return b;
+}
+function makeUse(text, storageKey, label) {
+  const b = document.createElement("button"); b.className = "btn-use"; b.textContent = label || "✓ USAR ESTE";
+  b.onclick = () => {
+    const arr = loadStore(storageKey); arr.push(text.toUpperCase()); saveStore(storageKey, arr);
+    renderStorageBox(storageKey);
+    b.textContent = "✓ GUARDADO"; b.style.opacity = "0.5"; b.disabled = true;
+  };
+  return b;
+}
+
+// ── Render resultados ──
 function getLabel(i, total) {
   const t = Math.floor(total / 3);
-  if (i < t) return "🔹 CORTA";
-  if (i < t * 2) return "🔸 MEDIANA";
-  return "🔺 LARGA";
+  if (i < t) return "🔹 CORTA"; if (i < t * 2) return "🔸 MEDIANA"; return "🔺 LARGA";
 }
-
 function renderResults() {
   const tDiv = document.getElementById("titulosDiv");
   const mDiv = document.getElementById("miniaturasDiv");
   tDiv.innerHTML = ""; mDiv.innerHTML = "";
 
   currentResults.titulos?.forEach((t, i) => {
-    const card = document.createElement("div"); card.className = "card card-left-red";
+    const card = document.createElement("div"); card.className = "card card-red";
     const lbl = document.createElement("div"); lbl.className = "sublbl"; lbl.textContent = getLabel(i, currentResults.titulos.length) + " — OPCIÓN " + (i+1);
     const row = document.createElement("div"); row.className = "result-row";
     const span = document.createElement("span"); span.className = "result-text"; span.textContent = t;
     const rBtn = document.createElement("button"); rBtn.className = "btn-regen"; rBtn.textContent = "↻";
-    rBtn.onclick = async () => { rBtn.disabled = true; rBtn.textContent = "..."; await regenTitulo(i, t); rBtn.disabled = false; };
-    const useBtn = makeUse(t, "dd_yt_titles");
-    const cpBtn = makeCopy(t);
-    row.appendChild(span); row.appendChild(rBtn); row.appendChild(useBtn); row.appendChild(cpBtn);
+    rBtn.onclick = () => regenTitulo(i, t, rBtn);
+    row.appendChild(span); row.appendChild(rBtn); row.appendChild(makeUse(t, "dd_yt_titles")); row.appendChild(makeCopy(t));
     card.appendChild(lbl); card.appendChild(row); tDiv.appendChild(card);
   });
 
   currentResults.miniaturas?.forEach((m, i) => {
-    const card = document.createElement("div"); card.className = "card card-left-blue";
+    const card = document.createElement("div"); card.className = "card card-blue";
     const lbl = document.createElement("div"); lbl.className = "sublbl"; lbl.style.marginBottom = "10px"; lbl.textContent = "MINIATURA OPCIÓN " + (i+1);
     const subLbl = document.createElement("div"); subLbl.className = "sublbl"; subLbl.textContent = "SUBTÍTULO (ARRIBA, ENTRE ASTERISCOS)";
-    const subVal = document.createElement("div"); subVal.className = "mini-sub"; subVal.style.marginBottom = "8px"; subVal.textContent = m.subtitulo;
+    const subVal = document.createElement("div"); subVal.className = "mini-sub"; subVal.textContent = m.subtitulo;
     const titLbl = document.createElement("div"); titLbl.className = "sublbl"; titLbl.textContent = "TÍTULO GRANDE (MÁX. 5 PALABRAS)";
-    const titVal = document.createElement("div"); titVal.className = "mini-titulo"; titVal.style.marginBottom = "10px"; titVal.textContent = m.titulo;
-    const btnRow = document.createElement("div"); btnRow.style.cssText = "display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap";
+    const titVal = document.createElement("div"); titVal.className = "mini-titulo"; titVal.textContent = m.titulo;
+    const btnRow = document.createElement("div"); btnRow.style.cssText = "display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap;margin-top:8px";
     const rBtn = document.createElement("button"); rBtn.className = "btn-regen"; rBtn.textContent = "↻ REGENERAR";
-    rBtn.onclick = async () => { rBtn.disabled = true; rBtn.textContent = "..."; await regenMiniatura(i, m.titulo, m.subtitulo); rBtn.disabled = false; };
-    const useTitBtn = makeUse(m.titulo, "dd_mini_titles");
-    useTitBtn.textContent = "✓ USAR TÍTULO";
-    const useSubBtn = makeUse(m.subtitulo, "dd_mini_subs");
-    useSubBtn.textContent = "✓ USAR SUBTÍTULO";
-    const cpTit = makeCopy(m.titulo); cpTit.textContent = "COPIAR TÍTULO";
-    const cpSub = makeCopy(m.subtitulo); cpSub.textContent = "COPIAR SUB";
-    btnRow.appendChild(rBtn); btnRow.appendChild(useTitBtn); btnRow.appendChild(useSubBtn); btnRow.appendChild(cpSub); btnRow.appendChild(cpTit);
-    card.appendChild(lbl); card.appendChild(subLbl); card.appendChild(subVal); card.appendChild(titLbl); card.appendChild(titVal); card.appendChild(btnRow);
+    rBtn.onclick = () => regenMiniatura(i, m.titulo, m.subtitulo, rBtn);
+    btnRow.appendChild(rBtn);
+    btnRow.appendChild(makeUse(m.titulo, "dd_mini_titles", "✓ USAR TÍTULO"));
+    btnRow.appendChild(makeUse(m.subtitulo, "dd_mini_subs", "✓ USAR SUBTÍTULO"));
+    btnRow.appendChild(makeCopy(m.subtitulo)); 
+    btnRow.appendChild(makeCopy(m.titulo));
+    card.appendChild(lbl); card.appendChild(subLbl); card.appendChild(subVal);
+    card.appendChild(titLbl); card.appendChild(titVal); card.appendChild(btnRow);
     mDiv.appendChild(card);
   });
 }
 
-// ── Storage boxes ─────────────────────────────────────
+// ── Storage boxes ──
 const storageConfig = [
   { key: "dd_yt_titles", title: "TÍTULOS YOUTUBE USADOS", icon: "🔴", color: "#e63946" },
   { key: "dd_mini_titles", title: "TÍTULOS DE MINIATURA USADOS", icon: "🖼️", color: "#3b82f6" },
   { key: "dd_mini_subs", title: "SUBTÍTULOS DE MINIATURA USADOS", icon: "📌", color: "#22c55e" }
 ];
-
 function renderStorageBox(key) {
   const cfg = storageConfig.find(c => c.key === key);
   const container = document.getElementById("box_" + key);
@@ -341,13 +335,13 @@ function renderStorageBox(key) {
   const box = document.createElement("div"); box.className = "storage-box";
   const head = document.createElement("div"); head.className = "storage-head";
   const ttl = document.createElement("div"); ttl.className = "storage-title"; ttl.style.color = cfg.color; ttl.textContent = cfg.icon + " " + cfg.title;
-  const tog = document.createElement("button"); tog.className = "storage-toggle"; tog.textContent = items.length + " guardados " + (isOpen ? "▲" : "▼");
+  const tog = document.createElement("button"); tog.className = "storage-toggle";
+  tog.textContent = items.length + " guardados " + (isOpen ? "▲" : "▼");
   tog.onclick = () => { container.dataset.open = isOpen ? "0" : "1"; renderStorageBox(key); };
   head.appendChild(ttl); head.appendChild(tog);
-  const inp = document.createElement("textarea");
-  inp.className = "storage-input"; inp.rows = 2;
-  inp.placeholder = cfg.key === "dd_yt_titles" ? "Pegá uno o varios títulos y presioná Enter..." : cfg.key === "dd_mini_titles" ? "Título grande de la miniatura y presioná Enter..." : "Subtítulo de la miniatura y presioná Enter...";
+  const inp = document.createElement("textarea"); inp.className = "storage-input"; inp.rows = 2;
   inp.style.cssText = "width:100%;background:#0a1628;border:1px solid " + cfg.color + ";border-radius:6px;color:#fff;padding:8px 12px;font-size:12px;outline:none;font-family:inherit;resize:vertical;margin-top:0";
+  inp.placeholder = "Pegá uno o varios y presioná Enter...";
   inp.onkeydown = e => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
@@ -372,7 +366,6 @@ function renderStorageBox(key) {
   }
   container.appendChild(box);
 }
-
 storageConfig.forEach(c => { document.getElementById("box_" + c.key).dataset.open = "0"; renderStorageBox(c.key); });
 </script>
 </body>
