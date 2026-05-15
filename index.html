@@ -207,7 +207,7 @@ async function callGemini(prompt) {
   const res = await fetch(GEMINI_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0.9 } })
+    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0.9, maxOutputTokens: 2048 } })
   });
   const data = await res.json();
   const txt = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
@@ -230,7 +230,7 @@ async function generate() {
   const tB = ytT.length > 0 ? "TÍTULOS YOUTUBE ANTERIORES:\n" + ytT.join("\n") + "\n\n" : "";
   const mB = mnT.length > 0 ? "TÍTULOS DE MINIATURA ANTERIORES:\n" + mnT.join("\n") + "\n\n" : "";
   const sB = mnS.length > 0 ? "SUBTÍTULOS DE MINIATURA ANTERIORES:\n" + mnS.join("\n") + "\n\n" : "";
-  const trB = transcript ? "\n\nTranscripción:\n" + transcript.slice(0, 6000) : "";
+  const trB = transcript ? "\n\nTranscripción (resumen del contenido):\n" + transcript.slice(0, 3000) : "";
 
   const prompt = `Sos un experto en YouTube de contenido político de derecha en español (Argentina).
 REGLAS: TODO en MAYÚSCULAS. Imitá el estilo del canal. Generá exactamente ${cant} títulos YouTube distribuidos entre cortos (máx 5 palabras), medianos (6-10 palabras) y largos (11+ palabras). Título de miniatura: MÁXIMO 5 PALABRAS. Subtítulo entre asteriscos *ASÍ*, más largo, en MAYÚSCULAS.
